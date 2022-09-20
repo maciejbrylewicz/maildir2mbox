@@ -1,8 +1,8 @@
 #!/bin/bash
 
-TOOLS_DIR=/data/tools
-MAILDIR=/data/2_2012-2014_Postfix.maildir
-LOGDIR=/data/log
+TOOLS_DIR= /home/maciej/devel/maildir2mbox
+MAILDIR=/home/maciej/opt
+LOGDIR=/home/maciej/log
 
 for d in "$MAILDIR"/* ; do
 	python3 "$TOOLS_DIR"/maildir2mbox.py -ar "$d" "$d".mboxtst >> "$LOGDIR"/2_progress.log
